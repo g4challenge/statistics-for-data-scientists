@@ -8,7 +8,7 @@ library(corrplot)
 library(descr)
 
 # Import the datasets needed for chapter 1
-PSDS_PATH <- file.path('~', 'statistics-for-data-scientists')
+PSDS_PATH <- file.path('C:/Users/huberlukas.KUFSTEIN/dev/statistics4ds')
 dir.create(file.path(PSDS_PATH, 'figures'))
 
 state <- read.csv(file.path(PSDS_PATH, 'data', 'state.csv'))

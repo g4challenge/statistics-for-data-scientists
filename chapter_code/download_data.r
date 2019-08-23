@@ -2,7 +2,7 @@
 ## an alternative approach to download is included below
 
 library(googledrive)
-PSDS_PATH <- file.path('~', 'statistics-for-data-scientists')
+PSDS_PATH <- file.path('C:/Users/huberlukas.KUFSTEIN/dev/statistics-for-data-scientists')
 
 ## Import state data
 drive_download(as_id("0B98qpkK5EJembFc5RmVKVVJPdGc"), path=file.path(PSDS_PATH, 'data', 'state.csv'), overwrite=TRUE)
