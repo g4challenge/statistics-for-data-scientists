@@ -12,3 +12,11 @@ save(lc_loans, file="data/lc_loans.RData")
 
 airline_stats <- read.csv("data/airline_stats.csv")
 save(airline_stats, file="data/airline_stats.RData")
+
+loans_income <- read.csv("data/loans_income.csv")
+save(loans_income, file="data/loans_income.RData")
+
+set.seed(1234)
+heads <- rbinom(1, 50, 0.5)
+prop.test(heads, 50, conf.level=0.99)
+save(heads, file="data/heads.RData")
