@@ -1,8 +1,13 @@
 # dev_hist
 
+library(tidyverse)
+
 save(dfw, file="data/dfw.RData")
 save(sp500_px, file="data/sp500_px.RData")
 save(sp500_sym, file="data/sp500_sym.RData")
+
+state <- read.csv(file.path('data/', 'state.csv'))
+save(state, file="state.RData")
 
 kc_tax <- read.csv("data/kc_tax.csv")
 save(kc_tax, file="data/kc_tax.RData")
@@ -20,3 +25,20 @@ set.seed(1234)
 heads <- rbinom(1, 50, 0.5)
 prop.test(heads, 50, conf.level=0.99)
 save(heads, file="data/heads.RData")
+
+ab_data <- read.csv("data/ab_data.csv")
+ab_test <- ab_data %>% select(group, converted)
+save(ab_test, file="data/ab_test.RData")
+
+session_times <- read.csv(file.path('data/web_page_data.csv'))
+save(session_times, file="data/session_times.RData")
+
+
+four_sessions  <- read.csv('data/four_sessions.csv')
+save(four_sessions, file = "data/four_sessions.RData")
+
+click_rates <-  read.csv('data/click_rates.csv')
+save(click_rates, file="data/click_rates.RData")
+
+imanishi <-  read.csv('data/imanishi_data.csv')
+save(imanishi, file="data/imanishi.RData")
