@@ -42,3 +42,7 @@ save(click_rates, file="data/click_rates.RData")
 
 imanishi <-  read.csv('data/imanishi_data.csv')
 save(imanishi, file="data/imanishi.RData")
+
+### Extra Data
+automobile <- read.csv('data/automobile.csv')
+save(automobile, file='data/automobile.RData')
