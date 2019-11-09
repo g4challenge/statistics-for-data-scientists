@@ -1,13 +1,13 @@
-#' States
+#' State
 #'
 #' State data for Murder Rates with Abbrev.
 #' @docType data
 #'
-#' @usage data(states)
+#' @usage data(state)
 #'
 #' @keywords datasets
 #'
 #'
 #' @examples
-#' data(states)
-"states"
+#' data(state)
+"state"

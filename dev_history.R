@@ -7,7 +7,7 @@ save(sp500_px, file="data/sp500_px.RData")
 save(sp500_sym, file="data/sp500_sym.RData")
 
 state <- read.csv(file.path('data/', 'state.csv'))
-save(state, file="state.RData")
+save(state, file="data/state.RData")
 
 kc_tax <- read.csv("data/kc_tax.csv")
 save(kc_tax, file="data/kc_tax.RData")
