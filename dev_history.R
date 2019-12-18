@@ -2,6 +2,7 @@
 
 library(tidyverse)
 
+dfw <- read.csv("data/dfw_airline.csv")
 save(dfw, file="data/dfw.RData")
 save(sp500_px, file="data/sp500_px.RData")
 save(sp500_sym, file="data/sp500_sym.RData")
@@ -46,3 +47,6 @@ save(imanishi, file="data/imanishi.RData")
 ### Extra Data
 automobile <- read.csv('data/automobile.csv')
 save(automobile, file='data/automobile.RData')
+
+laptops <- read.csv('data/laptops.csv')
+save(laptops, file='data/laptops.RData')
