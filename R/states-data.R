@@ -1,13 +1,13 @@
-#' State
+#' King County Housing Data
 #'
-#' State data for Murder Rates with Abbrev.
+#' housing data from King County (Seattle), Washington
 #' @docType data
 #'
-#' @usage data(state)
+#' @usage data(house)
 #'
 #' @keywords datasets
 #'
 #'
 #' @examples
-#' data(state)
-"state"
+#' data(house)
+"house"

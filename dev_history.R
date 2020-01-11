@@ -44,9 +44,18 @@ save(click_rates, file="data/click_rates.RData")
 imanishi <-  read.csv('data/imanishi_data.csv')
 save(imanishi, file="data/imanishi.RData")
 
+library(readr)
+house <- read.csv('data/house_sales.csv', sep='\t')
+save(house, file="data/house.RData")
+
 ### Extra Data
 automobile <- read.csv('data/automobile.csv')
 save(automobile, file='data/automobile.RData')
 
 laptops <- read.csv('data/laptops.csv')
 save(laptops, file='data/laptops.RData')
+
+laptops_unclean <- laptops
+del <- sample(0:1303, 12)
+laptops_unclean$Price_euros[del]<-NA
+save(laptops_unclean, file="data/laptops_unclean.RData")
