@@ -18,7 +18,7 @@ dates <- parse_date_time(paste(substr(names(zhvi), start=2, stop=8), "01", sep="
 zhvi <- data.frame(ym=dates, zhvi_px=zhvi, row.names = NULL) %>%
   mutate(zhvi_idx=zhvi/last(zhvi))
 
-house <- read.csv(file.path(PSDS_PATH, 'data', 'house_sales.csv'), sep='\t')
+house <- read.csv('data/house_sales.csv', sep='\t')
 # house <- house[house$ZipCode > 0, ]
 # write.table(house, file.path(PSDS_PATH, 'data', 'house_sales.csv'), sep='\t')
 ## Code for Figure 1
