@@ -22,6 +22,17 @@ save(airline_stats, file="data/airline_stats.RData")
 loans_income <- read.csv("data/loans_income.csv")
 save(loans_income, file="data/loans_income.RData")
 
+library(readr)
+loan_data <- read.csv("data/loan_data.csv")
+save(loan_data, file="data/loan_data.RData")
+#View(loan_data)
+seed <- 10101
+loan3000 <- loan_data[sample(nrow(loan_data), 3000),  
+                      c("outcome", "purpose_", "dti", "borrower_score", "payment_inc_ratio")]
+loan_data$purpose <- factor(loan_data$purpose_)
+
+save(loan3000, file="data/loan3000.rdata")
+
 set.seed(1234)
 heads <- rbinom(1, 50, 0.5)
 prop.test(heads, 50, conf.level=0.99)
@@ -54,6 +65,9 @@ save(automobile, file='data/automobile.RData')
 
 laptops <- read.csv('data/laptops.csv')
 save(laptops, file='data/laptops.RData')
+
+weatherAUS <- read.csv('data/weatherAUS.csv')
+save(weatherAUS, file = "data/weatherAUS.RData")
 
 laptops_unclean <- laptops
 del <- sample(0:1303, 12)
