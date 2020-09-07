@@ -1,5 +1,7 @@
 # statistics-for-data-scientists
-Code associated with the book "Practical Statistics for Data Scientists: 50 Essential Concepts"
+
+- Basic Environment for the use in the LABs
+- Code associated with the book "Practical Statistics for Data Scientists: 50 Essential Concepts"
 
 
 # Installation from Github

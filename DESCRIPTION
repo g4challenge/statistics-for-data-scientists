@@ -1,13 +1,13 @@
 Package: statistics4ds
-Title: Contains Example Code for the Book Practical STatistics for Data Scientists
-Version: 0.0.0.9000
+Title: Statistics and Algorithms for Data Science Students
+Version: 0.0.1
 Authors@R: 
     person(given = "Lukas",
            family = "Huber",
            role = c("aut", "cre"),
            email = "lukas.huber@fh-kufstein.ac.at",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Has all downloaded data files included, adds documentation and eases up the process.
+           comment = c(ORCID = "0000-0001-5443-0290"))
+Description: Has all downloaded data files included, adds documentation and eases up the process. Contains Example Code for the Book Practical Statistics for Data Scientists
 License: What license it uses
 Encoding: UTF-8
 LazyData: true
