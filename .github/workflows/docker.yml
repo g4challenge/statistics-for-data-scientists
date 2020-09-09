@@ -6,14 +6,13 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: rocker/verse:4.0.2
     steps:
       - uses: actions/checkout@v1
       - name: Login to DockerHub Registry
         run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USER }} --password-stdin
       - name: Build the tagged Docker image
-        run: | 
-             docker-compose -f compose/shiny-4.0.0.yml build 
+        run: docker build -t="statistics-ds" .
       - name: Push the tagged Docker image
         run: docker-compose  -f compose/shiny-4.0.0.yml push
 
