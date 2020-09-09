@@ -4,8 +4,8 @@ library(ggplot2)
 library(ascii)
 library(lubridate)
 library(ellipse)
-library(mclust)
-library(cluster)
+#library(mclust)
+#library(cluster)
 
 
 ###############################################################
