@@ -1,4 +1,4 @@
-name: Build & Push shiny 
+name: Build & Push Docker Image 
 
 on: [push]
 #  release:
@@ -6,7 +6,7 @@ on: [push]
 
 jobs:
   build:
-    runs-on: rocker/verse:4.0.2
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: Login to DockerHub Registry
