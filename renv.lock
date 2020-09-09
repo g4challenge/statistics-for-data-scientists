@@ -123,10 +123,10 @@
     },
     "Rcpp": {
       "Package": "Rcpp",
-      "Version": "1.0.4.6",
+      "Version": "1.0.5",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "e652f23d8b1807cc975c51410d05b72f"
+      "Hash": "125dc7a0ed375eb68c0ce533b48d291f"
     },
     "XML": {
       "Package": "XML",
@@ -247,12 +247,12 @@
       "Repository": "CRAN",
       "Hash": "08cf4045c149a0f0eaf405324c7495bd"
     },
-    "cluster": {
-      "Package": "cluster",
-      "Version": "2.1.0",
+    "codetools": {
+      "Package": "codetools",
+      "Version": "0.2-16",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "db63a44aab5aadcb6bf2f129751d129a"
+      "Hash": "89cf4b8207269ccf82fbeb6473fd662b"
     },
     "colorspace": {
       "Package": "colorspace",
@@ -494,10 +494,10 @@
     },
     "htmltools": {
       "Package": "htmltools",
-      "Version": "0.4.0",
+      "Version": "0.5.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "2d7691222f82f41e93f6d30f169bd5e1"
+      "Hash": "7d651b7131794fe007b1ad6f21aaa401"
     },
     "httpuv": {
       "Package": "httpuv",
@@ -529,10 +529,10 @@
     },
     "jsonlite": {
       "Package": "jsonlite",
-      "Version": "1.7.0",
+      "Version": "1.7.1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "2657f20b9a74c996c602e74ebe540b06"
+      "Hash": "1ec84e070b88b37ed169f19def40d47c"
     },
     "klaR": {
       "Package": "klaR",
@@ -617,13 +617,6 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "d16f18aeb023d7a80c090d9458fc75a6"
-    },
-    "mclust": {
-      "Package": "mclust",
-      "Version": "5.4.6",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "0262a3b90d7b51339a9a0cd3f677100a"
     },
     "mgcv": {
       "Package": "mgcv",
@@ -767,10 +760,10 @@
     },
     "questionr": {
       "Package": "questionr",
-      "Version": "0.7.1",
+      "Version": "0.7.2",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "0d0cf866745b606ee4de39255c021576"
+      "Hash": "644da2ea0acc31d020da20b713462a9f"
     },
     "randomForest": {
       "Package": "randomForest",
@@ -884,13 +877,6 @@
       "Repository": "CRAN",
       "Hash": "ee4ed72d7a5047d9e73cf922ad66e9c9"
     },
-    "sm": {
-      "Package": "sm",
-      "Version": "2.2-5.6",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "4f27b2025944b16393da73c178086b53"
-    },
     "sourcetools": {
       "Package": "sourcetools",
       "Version": "0.1.7",
@@ -1003,13 +989,6 @@
       "Repository": "CRAN",
       "Hash": "0bc90078aeee42f2520b1d0a33bd6758"
     },
-    "vioplot": {
-      "Package": "vioplot",
-      "Version": "0.3.5",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "c6d6e4739b50bbc2581f20926f7bbc43"
-    },
     "viridisLite": {
       "Package": "viridisLite",
       "Version": "0.3.0",
@@ -1033,17 +1012,17 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.15",
+      "Version": "0.16",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "ddeca7650052ff9131ac7c41a9a77b3b"
+      "Hash": "b4106139b90981a8bfea9c10bab0baf1"
     },
     "xgboost": {
       "Package": "xgboost",
-      "Version": "1.1.1.1",
+      "Version": "1.2.0.1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "17b1f93f73844394d1578de45a681bea"
+      "Hash": "e83e1df3948005afbddd83db86f3a0cb"
     },
     "xml2": {
       "Package": "xml2",
@@ -1065,13 +1044,6 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "2826c5d9efb0a88f657c7a679c7106db"
-    },
-    "zoo": {
-      "Package": "zoo",
-      "Version": "1.8-8",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "c2ea03282caa1f6972dc84fc5bf671cc"
     }
   }
 }
