@@ -11,3 +11,7 @@ Description: Has all downloaded data files included, adds documentation and ease
 License: What license it uses
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.1.1
+Imports: 
+    openintro,
+    tibble

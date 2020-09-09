@@ -16,14 +16,14 @@ save(kc_tax, file="data/kc_tax.RData")
 lc_loans <- read.csv("data/lc_loans.csv")
 save(lc_loans, file="data/lc_loans.RData")
 
-airline_stats <- read.csv("data/airline_stats.csv")
+airline_stats <- read.csv("data/airline_stats.csv") %>% as_tibble()
 save(airline_stats, file="data/airline_stats.RData")
 
-loans_income <- read.csv("data/loans_income.csv")
+loans_income <- read_csv("data/loans_income.csv")
 save(loans_income, file="data/loans_income.RData")
 
 library(readr)
-loan_data <- read.csv("data/loan_data.csv")
+loan_data <- read.csv("data/loan_data.csv") %>% as_tibble()
 save(loan_data, file="data/loan_data.RData")
 #View(loan_data)
 seed <- 10101
@@ -73,3 +73,8 @@ laptops_unclean <- laptops
 del <- sample(0:1303, 12)
 laptops_unclean$Price_euros[del]<-NA
 save(laptops_unclean, file="data/laptops_unclean.RData")
+
+## Docker
+
+# docker tag IMAGE_ID docker.pkg.github.com/g4challenge/statistics-for-data-scientists/rstudio:0.1
+# docker push docker.pkg.github.com/g4challenge/statistics-for-data-scientists/rstudio:0.1
