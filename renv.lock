@@ -135,6 +135,13 @@
       "Repository": "CRAN",
       "Hash": "408d42d1359f2a84d377c1f7f0568624"
     },
+    "airports": {
+      "Package": "airports",
+      "Version": "0.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "14e997c91e0cdca32231b04143e0904c"
+    },
     "ascii": {
       "Package": "ascii",
       "Version": "2.3",
@@ -200,10 +207,10 @@
     },
     "callr": {
       "Package": "callr",
-      "Version": "3.4.3",
+      "Version": "3.4.4",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "643163a00cb536454c624883a10ae0bc"
+      "Hash": "e56fe17ffeddfdcfcef40981e41e1c40"
     },
     "cellranger": {
       "Package": "cellranger",
@@ -218,6 +225,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "a667800d5f0350371bedeb8b8b950289"
+    },
+    "cherryblossom": {
+      "Package": "cherryblossom",
+      "Version": "0.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ef936debf27cd40d667339a6ad89cd75"
     },
     "class": {
       "Package": "class",
@@ -667,6 +681,13 @@
       "Repository": "CRAN",
       "Hash": "7c24ab3a1e3afe50388eb2d893aab255"
     },
+    "openintro": {
+      "Package": "openintro",
+      "Version": "2.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "bba712737f339ab4e181ad0874f4cd42"
+    },
     "openssl": {
       "Package": "openssl",
       "Version": "1.4.2",
@@ -886,10 +907,10 @@
     },
     "stringi": {
       "Package": "stringi",
-      "Version": "1.4.6",
+      "Version": "1.5.3",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "e99d8d656980d2dd416a962ae55aec90"
+      "Hash": "a063ebea753c92910a4cca7b18bc1f05"
     },
     "stringr": {
       "Package": "stringr",
@@ -968,6 +989,13 @@
       "Repository": "CRAN",
       "Hash": "ed45de16b03027f36b2bc2e8c84c2533"
     },
+    "usdata": {
+      "Package": "usdata",
+      "Version": "0.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "4379d7a1a08917374f8254fe54dcc5c5"
+    },
     "utf8": {
       "Package": "utf8",
       "Version": "1.1.4",
@@ -1012,10 +1040,10 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.16",
+      "Version": "0.17",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "b4106139b90981a8bfea9c10bab0baf1"
+      "Hash": "5016afba2a931ac92bbb3c6feb03d2c8"
     },
     "xgboost": {
       "Package": "xgboost",
