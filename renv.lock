@@ -1072,6 +1072,14 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "2826c5d9efb0a88f657c7a679c7106db"
-    }
+    },
+      "learnr": {
+          "Package": "learnr",
+          "Version": "0.10.1",
+          "Source": "Repository",
+          "Repository": "CRAN",
+          "Hash": "2826c5d9efb0a88f657c7a679c7106db"
+      }
   }
 }
+

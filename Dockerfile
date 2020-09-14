@@ -11,7 +11,7 @@ COPY renv.lock renv.lock
 RUN R -e 'renv::consent(provided=T)'
 RUN R -e 'renv::restore()'
 #RUN R -e 'renv::snapshot()'
-#RUN R -e 'renv::restore("/home/rstudio",library="/home/rstudio/.local/share/renv/cache/v5/R-4.0/x86_64-pc-linux-gnu")'
+RUN R -e 'renv::restore("/home/rstudio",library="/home/rstudio/.local/share/renv/cache/v5/R-4.0/x86_64-pc-linux-gnu")'
 
 USER root
 

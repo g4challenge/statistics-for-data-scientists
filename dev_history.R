@@ -1,6 +1,7 @@
 # dev_hist
 
 library(tidyverse)
+library(learnr)
 
 dfw <- read.csv("data/dfw_airline.csv")
 save(dfw, file="data/dfw.RData")
