@@ -75,6 +75,25 @@ del <- sample(0:1303, 12)
 laptops_unclean$Price_euros[del]<-NA
 save(laptops_unclean, file="data/laptops_unclean.RData")
 
+#### UNVotes
+# load packages ----------------------------------------------------------------
+
+library(unvotes)
+library(tidyverse)
+library(here)
+
+# unvotes ----------------------------------------------------------------------
+
+unvotes <- un_votes %>%
+  mutate(country =
+           case_when(
+             country == "United Kingdom of Great Britain and Northern Ireland" ~ "UK & NI",
+             country == "United States of America"                             ~ "US",
+             TRUE                                                              ~ country
+           )) %>%
+  inner_join(un_roll_calls, by = "rcid") %>%
+  inner_join(un_roll_call_issues, by = "rcid")
+
 ## Docker
 
 # docker tag IMAGE_ID docker.pkg.github.com/g4challenge/statistics-for-data-scientists/rstudio:0.1

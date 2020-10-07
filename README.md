@@ -35,6 +35,9 @@ docker run -e PASSWORD=12345 -v $(pwd):/home/rstudio -p 8787:8787 docker.pkg.git
 
 Get Started by using the "learnr"-Tutorials.
 
+- Option 1: UN-Votes
+- Option 2: Covid-19
+
 ## Exercises
 
 You can copy in the exercises and start editing right away.

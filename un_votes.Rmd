@@ -1,0 +1,107 @@
+---
+title: "UN Votes"
+author: "Lukas Huber & Mine Çetinkaya-Rundel"
+date: "`r Sys.Date()`"
+output: 
+  html_document: 
+    toc: yes
+    toc_float: yes
+---
+
+## Einführung
+
+Wie stimmen verschiedene Länder in der Generalversammlung der Vereinten Nationen ab, wie hat sich ihr Abstimmungsverhalten im Laufe der Zeit entwickelt, und wie ähnlich oder unterschiedlich sehen sie bestimmte Fragen? Die Beantwortung dieser Fragen (auf hoher Ebene) steht im Mittelpunkt dieser Analyse.
+
+### Pakete
+
+Für unsere Analyse werden wir zusätzlich zum Coronavirus-Paket die folgenden Pakete für das Data Wrangling und die Visualisierung verwenden.
+
+- **tidyverse** für das Daten-Wrangling und die Visualisierung
+- **lubridate** Paket für die Handhabung von Daten (Datum/Zeit)
+- **glue** Paket zum Konstruieren von Textzeichenketten
+- **scales** Paket zur Formatierung von Achsenbeschriftungen
+- **ggrepel** Paket für den "hübschen" Druck von Länderetiketten
+
+Wir werden das **DT**-Paket für die interaktive Anzeige der tabellarischen Ausgabe im Anhang nutzen.
+
+
+```{r load-packages, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(lubridate)
+library(scales)
+library(DT)
+```
+
+### Daten
+
+Die Daten, die wir verwenden, stammen ursprünglich aus dem **unvotes**-Paket, aber es wurde ein wenig modifiziert (durch Zusammenfügen der verschiedenen Datenrahmen, die im Paket enthalten sind), um Ihnen den Einstieg in die Analyse zu erleichtern.
+
+```{r load-data}
+library(unvotes)
+unvotes <- un_votes %>%
+  mutate(country =
+           case_when(
+             country == "United Kingdom of Great Britain and Northern Ireland" ~ "UK & NI",
+             country == "United States of America"                             ~ "US",
+             TRUE                                                              ~ country
+           )) %>%
+  inner_join(un_roll_calls, by = "rcid") %>%
+  inner_join(un_roll_call_issues, by = "rcid")
+```
+
+
+## UN voting patterns {#voting}
+
+Lassen Sie uns eine Datenvisualisierung erstellen, die anzeigt, wie das Abstimmungsprotokoll der 
+Österreich veränderten sich im Laufe der Zeit bei einer Vielzahl von Themen und vergleichen sie 
+in zwei weitere Länder: Deutschland und die Türkei.
+
+Wir können leicht ändern, welche Länder auf dem Plan stehen, indem wir die 
+Länder, für die der obige Code `filter`s for. Beachten Sie, dass der Ländername 
+genau so geschrieben und großgeschrieben, wie es in den Daten erscheint. Siehe 
+den [Anhang](#appendix) für eine Liste der Länder in den Daten.
+
+
+```{r plot-yearly-yes-issue, fig.width=10, fig.height=6, message=FALSE}
+unvotes %>%
+  filter(country %in% c("Austria", "Germany", "Turkey")) %>%
+  mutate(year = year(date)) %>%
+  group_by(country, year, issue) %>%
+  summarize(percent_yes = mean(vote == "yes")) %>%
+  ggplot(mapping = aes(x = year, y = percent_yes, color = country)) +
+  geom_point(alpha = 0.4) +
+  geom_smooth(method = "loess", se = FALSE) +
+  facet_wrap(~issue) +
+  scale_y_continuous(labels = percent) +
+  labs(
+    title = "Percentage of 'Yes' votes in the UN General Assembly",
+    subtitle = "1946 to 2015",
+    y = "% Yes",
+    x = "Year",
+    color = "Country"
+  )
+```
+
+
+## Referenzen {#references}
+
+1. David Robinson (2017). [unvotes](https://CRAN.R-project.org/package=unvotes): 
+   United Nations General Assembly Voting Data. R package version 0.2.0.
+1. Erik Voeten "Data and Analyses of Voting in the UN General Assembly" 
+   Routledge Handbook of International Organization, edited by Bob Reinalda 
+   (published May 27, 2013).
+1. Much of the analysis has been modeled on the examples presented in the 
+   [unvotes package vignette](https://cran.r-project.org/web/packages/unvotes/vignettes/unvotes.html).
+
+
+## Appendix {#appendix}
+
+Below is a list of countries in the dataset:
+
+```{r list-countries, echo=FALSE}
+unvotes %>% 
+  select(country) %>%
+  arrange(country) %>% 
+  distinct() %>%
+  datatable()
+```
