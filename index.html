@@ -59,7 +59,6 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-
 <div id="rrstudio-in-container---aiming-at-statistics-for-data-scientists" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#rrstudio-in-container---aiming-at-statistics-for-data-scientists" class="anchor"></a>R+RStudio in Container - Aiming at Statistics for data scientists</h1></div>
@@ -72,31 +71,47 @@
 <li>
 <a href="https://rstudio.github.io/renv/index.html">renv</a> to ensure your packages are “in sync”</li>
 <li>
-<a href=""></a> tidyverse</li>
+<a href="https://www.tidyverse.org/">tidyverse</a> to create consistent grammar around opinioated opackages</li>
 </ul>
-</div>
-<div id="installation-from-docker" class="section level1">
-<h1 class="hasAnchor">
-<a href="#installation-from-docker" class="anchor"></a>Installation from Docker</h1>
+<div id="installation-from-docker" class="section level2">
+<h2 class="hasAnchor">
+<a href="#installation-from-docker" class="anchor"></a>Installation from Docker</h2>
 <p>You need to install <a href="https://docs.docker.com/get-docker/">Docker</a> first for your platform. Then the following command pulls the latest version of this repository in for you.</p>
-<pre><code>docker pull</code></pre>
+<pre><code>docker pull g4challenge/statistics-for-data-scientists:latest</code></pre>
 </div>
-<div id="start-docker" class="section level1">
-<h1 class="hasAnchor">
-<a href="#start-docker" class="anchor"></a>Start Docker</h1>
-<p>This starts the Docker container for you and makes it available at <a href="http://localhost:8787" class="uri">http://localhost:8787</a> use “rstudio” as user and “12345” as password unless you change the password to something else (recommended). Disclaimer: the password is visible in your terminal history and should therefore be different from other passwords and you should check that your system does not listen “publicly” on it’s IP-adress - use a firewall or configure it.</p>
+<div id="start-docker" class="section level2">
+<h2 class="hasAnchor">
+<a href="#start-docker" class="anchor"></a>Start Docker</h2>
+<p>This starts the Docker container for you and makes it available at <a href="http://localhost:8787" class="uri">http://localhost:8787</a></p>
+<ul>
+<li>use “rstudio” as user and “12345” as password unless you change the password to something else (recommended).</li>
+</ul>
+<p>Disclaimer: the password is visible in your terminal history and should therefore be different from other passwords and you should check that your system does not listen “publicly” on it’s IP-address - use a firewall or configure it.</p>
 <p>This command also “mounts” the current directory and lets you edit your local files and projects. I recommend you to use another git client (external of Docker).</p>
 <pre><code>docker run -e PASSWORD=12345 -v %cd%:/home/rstudio -p 8787:8787 docker.pkg.github.com/g4challenge/statistics-for-data-scientists/rstudio:0.1
-docker run -e PASSWORD=12345 -v $(pwd):/home/rstudio -p 8787:8787 docker.pkg.github.com/g4challenge/statistics-for-data-scientists/rstudio:0.1
-</code></pre>
+docker run -e PASSWORD=12345 -v $(pwd):/home/rstudio -p 8787:8787 docker.pkg.github.com/g4challenge/statistics-for-data-scientists/rstudio:0.1</code></pre>
 </div>
-<div id="installation-from-github" class="section level1">
-<h1 class="hasAnchor">
-<a href="#installation-from-github" class="anchor"></a>Installation from Github</h1>
+<div id="learning" class="section level2">
+<h2 class="hasAnchor">
+<a href="#learning" class="anchor"></a>Learning</h2>
+<p>Get Started by using the “learnr”-Tutorials.</p>
+<ul>
+<li>Option 1: UN-Votes</li>
+<li>Option 2: Covid-19</li>
+</ul>
+</div>
+<div id="exercises" class="section level2">
+<h2 class="hasAnchor">
+<a href="#exercises" class="anchor"></a>Exercises</h2>
+<p>You can copy in the exercises and start editing right away.</p>
+</div>
+<div id="installation-from-github" class="section level2">
+<h2 class="hasAnchor">
+<a href="#installation-from-github" class="anchor"></a>Installation from Github</h2>
 <pre><code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages(remotes)
 remotes::install_github("g4challenge/statistics-for-data-scientists")</a></code></pre>
 </div>
-
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -122,7 +137,7 @@ remotes::install_github("g4challenge/statistics-for-data-scientists")</a></code>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
