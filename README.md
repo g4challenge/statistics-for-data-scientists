@@ -14,7 +14,11 @@ You need to install [Docker](https://docs.docker.com/get-docker/) first for your
 
 ```
 docker pull g4challenge/statistics-for-data-scientists:latest
+# or 
+docker pull docker.pkg.github.com/g4challenge/statistics-for-data-scientists/rstudio:latest
 ```
+
+Attention: Alternatively use at the end `0.1` or another version string, to fixate the version
 
 
 ## Start Docker
