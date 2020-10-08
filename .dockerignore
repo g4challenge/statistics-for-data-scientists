@@ -1,3 +1,7 @@
 renv/library/
 **/.git/
 **/renv/library/
+**/.Rproj.user/
+**/.rstudio/
+**/.local/
+**/.config/

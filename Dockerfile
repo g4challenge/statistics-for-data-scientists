@@ -6,8 +6,9 @@ RUN R -e "install.packages('renv', version='0.12.0', repos = c(CRAN = 'https://c
 WORKDIR /home/rstudio/
 USER rstudio
 
-ADD * /home/rstudio/
+ADD . /home/rstudio/
 
+RUN ls -l
 RUN R -e 'renv::consent(provided=T)'
 RUN R -e 'renv::restore()'
 #RUN R -e 'renv::snapshot()'
