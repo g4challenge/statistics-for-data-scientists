@@ -35,6 +35,16 @@ docker run -e PASSWORD=12345 -v %cd%:/home/rstudio -p 8787:8787 docker.pkg.githu
 docker run -e PASSWORD=12345 -v $(pwd):/home/rstudio -p 8787:8787 docker.pkg.github.com/g4challenge/statistics-for-data-scientists/rstudio:0.1
 ```
 
+## Using RStudio
+
+After Accessing localhost:8787 login with the provided details above.
+
+make sure to open the project and restore the renv locally
+
+```
+renv::restore()
+```
+
 ## Learning
 
 Get Started by using the "learnr"-Tutorials.

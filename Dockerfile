@@ -16,5 +16,7 @@ RUN R -e 'renv::restore("/home/rstudio",library="/home/rstudio/.local/share/renv
 
 USER root
 
+RUN chmod 777 -R /home/rstudio/
+
 
 #RUN chmod 777 -r /home/rstudio/renv/library/R-4.0/x86_64-pc-linux-gnu/
