@@ -62,6 +62,7 @@
 <div id="rrstudio-in-container---aiming-at-statistics-for-data-scientists" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#rrstudio-in-container---aiming-at-statistics-for-data-scientists" class="anchor"></a>R+RStudio in Container - Aiming at Statistics for data scientists</h1></div>
+
 <p>This container/repository gets you started with R+RStudio without having to do “as much” heavy lifting. This environment includes:</p>
 <ul>
 <li>Basic Environment for the use in the LABs</li>
@@ -100,6 +101,7 @@ docker run -e PASSWORD=12345 -v $(pwd):/home/rstudio -p 8787:8787 docker.pkg.git
 <p>After Accessing localhost:8787 login with the provided details above.</p>
 <p>make sure to open the project and restore the renv locally</p>
 <pre><code><a href="https://rstudio.github.io/renv//reference/restore.html">renv::restore()</a></code></pre>
+<p>After this you can either use the integrated package or start with your own project.</p>
 </div>
 <div id="learning" class="section level2">
 <h2 class="hasAnchor">
@@ -138,7 +140,13 @@ remotes::install_github("g4challenge/statistics-for-data-scientists")</a></code>
 </ul>
 </div>
 
-  </div>
+  <div class="dev-status">
+<h2>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://mybinder.org/v2/gh/g4challenge/statistics-for-data-scientists/master"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a></li>
+</ul>
+</div>
+</div>
 </div>
 
 
