@@ -1,5 +1,7 @@
 # R+RStudio in Container - Aiming at Statistics for data scientists
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/g4challenge/statistics-for-data-scientists/master)
+
 This container/repository gets you started with R+RStudio without having to do "as much" heavy lifting. This environment includes:
 
 - Basic Environment for the use in the LABs
@@ -44,6 +46,8 @@ make sure to open the project and restore the renv locally
 ```
 renv::restore()
 ```
+
+After this you can either use the integrated package or start with your own project.
 
 ## Learning
 

@@ -57,8 +57,8 @@ imanishi <-  read.csv('data/imanishi_data.csv')
 save(imanishi, file="data/imanishi.RData")
 
 library(readr)
-house <- read.csv('data/house_sales.csv', sep='\t')
-save(house, file="data/house.RData")
+house_sales <- read.csv('data/house_sales.csv', sep='\t')
+save(house_sales, file="data/house_sales.RData")
 
 ### Extra Data
 automobile <- read.csv('data/automobile.csv')
